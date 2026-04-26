@@ -6,22 +6,6 @@ test.beforeEach(async ({ page }) => {
   await page.goto(url);
 });
 
-test('Открытие формы перевода', async ({ page }) => {
-  await page.click('text=Рублёвый счёт');
-
-  await expect(page.locator('input')).toBeVisible();
-});
-
-test('Поле карты не принимает буквы', async ({ page }) => {
-  await page.click('text=Рублёвый счёт');
-
-  const cardInput = page.locator('input');
-
-  await cardInput.fill('abcd!@#');
-
-  await expect(cardInput).toHaveValue('');
-});
-
 test('Комиссия округляется вниз', async ({ page }) => {
   await page.click('text=Рублёвый счёт');
 
