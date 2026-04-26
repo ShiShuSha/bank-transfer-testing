@@ -1,0 +1,12 @@
+
+{
+  "name": "bank-transfer-testing",
+  "version": "1.0.0",
+  "description": "UI testing for fake banking service",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.1"
+  }
+}
