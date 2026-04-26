@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test('Комиссия округляется вниз', async ({ page }) => {
-  await page.getByText('Рублевый счет').click();
+  await page.getByText('Рубли').click();
 
   const cardInput = page.locator('input').first();
   await cardInput.fill('1111222233334444');
@@ -20,7 +20,7 @@ test('Комиссия округляется вниз', async ({ page }) => {
 });
 
 test('Нельзя ввести более 16 цифр карты', async ({ page }) => {
-  await page.getByText('Рублевый счет').click();
+  await page.getByText('Рубли').click();
 
   const cardInput = page.locator('input').first();
 
@@ -30,7 +30,7 @@ test('Нельзя ввести более 16 цифр карты', async ({ pag
 });
 
 test('Нельзя вводить отрицательную сумму', async ({ page }) => {
-  await page.getByText('Рублевый счет').click();
+  await page.getByText('Рубли').click();
 
   const cardInput = page.locator('input').first();
   await cardInput.fill('1111222233334444');
