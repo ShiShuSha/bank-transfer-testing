@@ -25,3 +25,7 @@ python3 -m http.server 8000
 ```
 http://localhost:8000/?balance=30000&reserved=20001
 ```
+Установка зависимстей:
+```
+pip install -r requirements.txt
+```
